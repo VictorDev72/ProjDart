@@ -31,4 +31,30 @@ class Monitorviewmodel {
       return [];
     }
   }
+
+  List<Monitor> filtrarMonitoresPorDia(List<Monitor> monitores, String diaBuscado) {
+
+    if (diaBuscado.isEmpty) {
+      return monitores;
+    }
+
+    return monitores.where((monitor) {
+
+      final horariosDoDia = monitor.horarios[diaBuscado];
+
+
+      return horariosDoDia != null && horariosDoDia.any((horario) => horario.isNotEmpty);
+    }).toList();
+  }
+
+
+  List<Monitor> filtrarMonitores(List<Monitor> monitores, String filtro) {
+  if (filtro.isEmpty) return monitores;
+
+  return monitores.where((monitor) {
+    final horarios = monitor.horarios[filtro];
+    return horarios != null && horarios.any((h) => h.isNotEmpty);
+  }).toList();
+}
+
 }

@@ -41,7 +41,7 @@ class HomeScreen extends StatelessWidget {
                     child: Padding(
                       padding: const EdgeInsets.all(6.0), 
                       child: Image.asset(
-                        'assets/images/cotuca.png', // Verifique se o nome do arquivo está idêntico (maiúsculas/minúsculas)
+                        'assets/images/cotuca.png', 
                         fit: BoxFit.contain,
                       ),
                     ),
@@ -60,54 +60,91 @@ class HomeScreen extends StatelessWidget {
               leading: Icon(Icons.home),
               title: Text('Todos os Monitores'),
               onTap: () {
+                Navigator.pop(context);
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const MonitorCarrosel(), // Substitua pelo nome da sua classe de destino
+                    builder: (context) => const MonitorCarrosel(),
                   ),
                 );
               },
             ),
             ListTile(
-              leading: Icon(Icons.settings),
+              leading: Icon(Icons.calendar_month),
               title: Text('Segunda'),
               onTap: () {
                 Navigator.pop(context);
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const MonitorCarrosel(diaFiltro: 'segunda'),
+                  ),
+                );
               },
             ),
             ListTile(
-              leading: Icon(Icons.settings),
+              leading: Icon(Icons.calendar_month),
               title: Text('Terça'),
               onTap: () {
                 Navigator.pop(context);
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const MonitorCarrosel(diaFiltro: 'terca'),
+                  ),
+                );
               },
             ),
             ListTile(
-              leading: Icon(Icons.settings),
+              leading: Icon(Icons.calendar_month),
               title: Text('Quarta'),
               onTap: () {
                 Navigator.pop(context);
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const MonitorCarrosel(diaFiltro: 'quarta'),
+                  ),
+                );
               },
             ),
             ListTile(
-              leading: Icon(Icons.settings),
+              leading: Icon(Icons.calendar_month),
               title: Text('Quinta'),
               onTap: () {
                 Navigator.pop(context);
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const MonitorCarrosel(diaFiltro: 'quinta'),
+                  ),
+                );
               },
             ),
             ListTile(
-              leading: Icon(Icons.settings),
+              leading: Icon(Icons.calendar_month),
               title: Text('Sexta'),
               onTap: () {
                 Navigator.pop(context);
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const MonitorCarrosel(diaFiltro: 'sexta'), 
+                  ),
+                );
               },
             ),
             ListTile(
-              leading: Icon(Icons.settings),
+              leading: Icon(Icons.calendar_month),
               title: Text('Sabado'),
               onTap: () {
                 Navigator.pop(context);
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const MonitorCarrosel(diaFiltro: 'sabado'), 
+                  ),
+                );
               },
             ),
 
